@@ -7,6 +7,8 @@ import { images } from '../../constants'
 import FormField  from "../../components/FormField"
 import CustomButton from '../../components/CustomButton'
 
+import { createUser } from '../../lib/appwrite'
+
 const SignIn = () => {
   const [form, setForm] = useState({
     username: '',
@@ -17,7 +19,10 @@ const SignIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const submit = () => {
-
+    if (form.username === "" || form.email === "" || form.password === "") {
+      Alert.alert("Error", "Please fill in all fields");
+    }
+    createUser();
   }
 
   return (
@@ -51,7 +56,7 @@ const SignIn = () => {
           />
 
           <CustomButton
-            title="Sign In"
+            title="Sign Up"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
