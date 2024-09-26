@@ -1,7 +1,9 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
 import React, { useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Link } from 'expo-router'
+import { useRouter } from 'expo-router';
+
 
 import { images } from '../../constants'
 import FormField  from "../../components/FormField"
@@ -9,20 +11,38 @@ import CustomButton from '../../components/CustomButton'
 
 import { createUser } from '../../lib/appwrite'
 
-const SignIn = () => {
+const SignUp = () => {
   const [form, setForm] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const submit = () => {
+  const router = useRouter();
+
+  const submit = async () => {
     if (form.username === "" || form.email === "" || form.password === "") {
       Alert.alert("Error", "Please fill in all fields");
+      return;
     }
-    createUser();
+
+    setIsSubmitting(true);
+
+    try {
+
+      const result = await createUser(form.email, form.password, form.username);
+      setUser(result);
+      setIsLogged(true);
+      
+      router.replace('/home')
+      } catch(error) {
+        Alert.alert('Error', error.message)
+      } finally {
+        setIsSubmitting(false)
+    }
+
   }
 
   return (
@@ -78,4 +98,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignUp
