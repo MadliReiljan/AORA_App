@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { icons } from "../../constants";
 import React, { useState } from 'react'
-import * as DocumentPicker from "expo-document-picker";
+import * as ImagePicker from "expo-image-picker";
 import FormField from '../../components/FormField'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { createVideoPost } from "../../lib/appwrite";
@@ -28,11 +28,10 @@ const Create = () => {
   })
 
   const openPicker = async (selectType) => {
-    const result = await DocumentPicker.getDocumentAsync({
-      type:
-        selectType === "image"
-          ? ["image/png", "image/jpg", "image/jpeg"]
-          : ["video/mp4", "video/gif"],
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: selectType === 'image' ? ImagePicker.MediaTypeOptions.Images : ImagePicker.MediaTypeOptions.Videos,
+      aspect: [4, 3],
+      quality: 1,
     });
 
     if (!result.canceled) {
