@@ -12,6 +12,8 @@ import CustomButton from '../../components/CustomButton'
 import { createUser } from '../../lib/appwrite'
 
 const SignUp = () => {
+
+  const { setUser, setIsLogged } = useGlobalContext();
   const [form, setForm] = useState({
     username: "",
     email: "",

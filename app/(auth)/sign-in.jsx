@@ -25,7 +25,7 @@ const SignIn = () => {
       return;
     }
 
-    setIsSubmitting(true);
+    setSubmitting(true);
 
     try {
 
@@ -39,7 +39,7 @@ const SignIn = () => {
       } catch(error) {
         Alert.alert('Error', error.message)
       } finally {
-        setIsSubmitting(false)
+        setSubmitting(false)
     }
 
   }
