@@ -1,5 +1,6 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { useState } from "react";
+import { Video, ResizeMode } from 'expo-av'
 
 import { icons } from "../constants";
 
@@ -36,7 +37,18 @@ creator: { username, avatar }} }) => {
       </View>
 
     {play ? (
-        <Text className="text-white">Playing</Text>
+        <Video 
+        source={{ uri: video }}
+        className="w-full h-60 rounded-xl mt-3"
+        resizeMode={ResizeMode.CONTAIN}
+        useNativeControls
+        shouldPlay
+        onPlaybackStatusUpdate={(status) => {
+          if(status.didJustFinish) {
+            setPlay(false);
+          }
+        }}
+      />
     ) : (
         <TouchableOpacity activeOpacity={0.7} onPress={() => setPlay(true)} className="w-full h-60 rounded-xl mt-3 relative justify-center items-center">
             <Image 
