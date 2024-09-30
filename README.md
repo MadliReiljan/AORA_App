@@ -2,6 +2,7 @@
 
 Aora is a video-sharing application where users can easily log in, upload videos with thumbnails and captions, and interact with trending content. 
 This app was built as part of a tutorial video to help me learn and practice building mobile applications. It serves as a foundational project that will guide me in creating more advanced apps in the future. 
+
 You can follow the tutorial here: https://www.youtube.com/watch?v=ZBCUegTZF7M
 
 ## Installation
