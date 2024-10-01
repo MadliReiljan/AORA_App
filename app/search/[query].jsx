@@ -1,13 +1,13 @@
 import { View, Text, FlatList} from 'react-native'
 import React, { useEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useLocalSearchParams } from 'expo-router';
 
 import SearchInput from "../../components/SearchInput";
 import VideoCard from '../../components/VideoCard';
 import EmptyState from '../../components/EmptyState';
 import { searchPosts } from '../../lib/appwrite'
 import useAppwrite from '../../lib/useAppwrite';
-import { useLocalSearchParams } from 'expo-router';
 
 const Search = () => {
   const { query } = useLocalSearchParams()

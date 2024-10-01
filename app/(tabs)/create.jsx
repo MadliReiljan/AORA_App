@@ -1,20 +1,15 @@
 import { router } from "expo-router";
-import {
-  View,
-  Text,
-  Alert,
-  Image,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import { icons } from "../../constants";
+import { Video, ResizeMode } from 'expo-av'
+
 import React, { useState } from 'react'
+import { View, Text, Alert, Image, TouchableOpacity, ScrollView, } from "react-native";
+
+import { icons } from "../../constants";
 import * as ImagePicker from "expo-image-picker";
 import FormField from '../../components/FormField'
+import CustomButton from '../../components/CustomButton';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { createVideoPost } from "../../lib/appwrite";
-import { Video, ResizeMode } from 'expo-av'
-import CustomButton from '../../components/CustomButton';
 import { useGlobalContext } from "../../context/GlobalProvider";
 
 const Create = () => {

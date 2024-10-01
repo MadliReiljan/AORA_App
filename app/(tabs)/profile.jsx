@@ -1,15 +1,15 @@
+import React from 'react'
 import { router } from "expo-router";
 import { View, FlatList, TouchableOpacity, Image} from 'react-native'
-import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { icons } from "../../constants";
 
+import { icons } from "../../constants";
+import { useGlobalContext } from '../../context/GlobalProvider';
 import InfoBox  from "../../components/InfoBox";
 import VideoCard from '../../components/VideoCard';
 import EmptyState from '../../components/EmptyState';
 import { getUserPosts, signOut } from '../../lib/appwrite'
 import useAppwrite from '../../lib/useAppwrite';
-import { useGlobalContext } from '../../context/GlobalProvider';
 
 const Profile = () => {
   const { user, setUser, setIsLogged } = useGlobalContext();

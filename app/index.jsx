@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -31,7 +30,7 @@ export default function App() {
             <Text className="text-3xl text-white font-bold text-center">
               Discover Endless{"\n"}
               Possibilities with{" "}
-              <Text className="text-secondary-200">ATM</Text>
+              <Text className="text-secondary-200">AORA</Text>
             </Text>
 
             <Image
@@ -42,7 +41,7 @@ export default function App() {
           </View>
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
-            Exploration with ATM_Map
+            Exploration with Aora
           </Text>
 
           <CustomButton
