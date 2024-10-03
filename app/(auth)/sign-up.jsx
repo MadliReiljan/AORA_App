@@ -3,13 +3,14 @@ import React, { useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Link } from 'expo-router'
 import { useRouter } from 'expo-router';
+import { useGlobalContext } from "@/context/GlobalProvider";
 
 
-import { images } from '../../constants'
-import FormField  from "../../components/FormField"
-import CustomButton from '../../components/CustomButton'
+import { images } from '@/constants'
+import FormField  from "@/components/FormField"
+import CustomButton from '@/components/CustomButton'
 
-import { createUser } from '../../lib/appwrite'
+import { createUser } from '@/lib/appwrite'
 
 const SignUp = () => {
 

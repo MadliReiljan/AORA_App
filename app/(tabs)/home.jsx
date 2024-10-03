@@ -2,14 +2,14 @@ import { View, Text, FlatList, Image, RefreshControl } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import { useGlobalContext } from '../../context/GlobalProvider'
-import SearchInput from "../../components/SearchInput";
-import Trending from "../../components/Trending";
-import VideoCard from '../../components/VideoCard';
-import EmptyState from '../../components/EmptyState';
-import { images } from "../../constants";
-import { getAllPosts, getLatestPosts } from '../../lib/appwrite'
-import useAppwrite from '../../lib/useAppwrite';
+import { useGlobalContext } from '@/context/GlobalProvider'
+import SearchInput from "@/components/SearchInput";
+import Trending from "@/components/Trending";
+import VideoCard from '@/components/VideoCard';
+import EmptyState from '@/components/EmptyState';
+import { images } from "@/constants";
+import { getAllPosts, getLatestPosts } from '@/lib/appwrite'
+import useAppwrite from '@/lib/useAppwrite';
 
 const Home = () => {
   const { user } = useGlobalContext();

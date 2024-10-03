@@ -3,11 +3,11 @@ import React, { useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Link, router } from 'expo-router'
 
-import { getCurrentUser, signIn } from "../../lib/appwrite";
-import { useGlobalContext } from "../../context/GlobalProvider";
-import { images } from '../../constants'
-import FormField  from "../../components/FormField"
-import CustomButton from '../../components/CustomButton'
+import { getCurrentUser, signIn } from "@/lib/appwrite";
+import { useGlobalContext } from "@/context/GlobalProvider";
+import { images } from '@/constants'
+import FormField  from "@/components/FormField"
+import CustomButton from '@/components/CustomButton'
 
 const SignIn = () => {
   const { setUser, setIsLogged } = useGlobalContext();

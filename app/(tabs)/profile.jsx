@@ -3,13 +3,13 @@ import { router } from "expo-router";
 import { View, FlatList, TouchableOpacity, Image} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import { icons } from "../../constants";
-import { useGlobalContext } from '../../context/GlobalProvider';
-import InfoBox  from "../../components/InfoBox";
-import VideoCard from '../../components/VideoCard';
-import EmptyState from '../../components/EmptyState';
-import { getUserPosts, signOut } from '../../lib/appwrite'
-import useAppwrite from '../../lib/useAppwrite';
+import { icons } from "@/constants";
+import { useGlobalContext } from '@/context/GlobalProvider';
+import InfoBox  from "@/components/InfoBox";
+import VideoCard from '@/components/VideoCard';
+import EmptyState from '@/components/EmptyState';
+import { getUserPosts, signOut } from '@/lib/appwrite'
+import useAppwrite from '@/lib/useAppwrite';
 
 const Profile = () => {
   const { user, setUser, setIsLogged } = useGlobalContext();

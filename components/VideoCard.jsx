@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { useState } from "react";
 import { Video, ResizeMode } from 'expo-av'
 
-import { icons } from "../constants";
+import { icons } from "@/constants";
 
 const VideoCard = ({ video: { title, thumbnail, video, 
 creator: { username, avatar }} }) => {
