@@ -25,20 +25,31 @@ cd aora
 ```
 ### Installation
 
-Install the project dependencies using npm:
+Install the project dependencies:
 
 ```bash
 npm install
 ```
+```bash
+npx create-expo-app@latest
+```
 ### Running the Project
 
 ```bash
-npm start
+ npx expo start -c
 ```
 
 ### Expo Go
 
 Download the Expo Go app onto your device, then use it to scan the QR code from Terminal and run.
+
+### Using Appwrite
+
+https://appwrite.io/ > create an account > create a project and choose either IOS or android
+
+Create a database with 2 tables and a few attributes - it is also shown in the video. Create a connection between the application and the database - creating the appwrite.js file in lib and adding the necessary keys.
+
+
 
 ## Features
 
