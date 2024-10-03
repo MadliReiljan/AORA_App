@@ -14,7 +14,7 @@ Follow these steps to set up the project locally on your machine.
 Make sure you have the following installed on your machine:
 
 * Git
-* Node.js
+* Node.js (v20.11.1)
 * npm (Node Package Manager)
 
 ### Cloning the Repository
