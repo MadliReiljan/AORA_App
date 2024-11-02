@@ -43,7 +43,7 @@ npx create-expo-app@latest
 
 Download the Expo Go app onto your device, then use it to scan the QR code from Terminal and run.
 
-NP! There may be some visual or technical differences when using Android phone, because the app was made for IOS users.
+NB! There may be some visual or technical differences when using Android phone, because the app was made for IOS users.
 
 ### Using Appwrite
 
